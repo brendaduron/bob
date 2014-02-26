@@ -1,4 +1,4 @@
-# Class Bob
+# Class Bob ajaja
 class Bob
   def hey (frace)
     if  frace.strip.empty?
