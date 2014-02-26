@@ -1,6 +1,6 @@
 task :default => [:test]
 
 task :test do
-ruby "test_bob.rb"
+ruby "bob_test.rb"
 
 end
