@@ -1,4 +1,4 @@
-# Class Bob
+# Class Bob ajaja
 class Bob
   def hey (frace)
     if  frace.strip.empty?
@@ -6,7 +6,7 @@ class Bob
     elsif frace == frace.upcase and /[A-Z]/.match(frace)
       'Woah, chill out!'
     elsif frace.end_with?('?') 
-      'Sure. '
+      'Sure.'
     else
       'Whatever.'
     end
