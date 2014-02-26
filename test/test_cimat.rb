@@ -1,3 +1,5 @@
+#!/bin/env  ruby
+# encoding: utf-8
 require "json"
 require "selenium-webdriver"
 gem "test-unit"
@@ -34,14 +36,14 @@ class Cimat < Test::Unit::TestCase
   end
   
   def element_present?(how, what)
-    ${receiver}.find_element(how, what)
+    $receiver.find_element(how, what)
     true
   rescue Selenium::WebDriver::Error::NoSuchElementError
     false
   end
   
   def alert_present?()
-    ${receiver}.switch_to.alert
+    $receiver.switch_to.alert
     true
   rescue Selenium::WebDriver::Error::NoAlertPresentError
     false
@@ -54,7 +56,7 @@ class Cimat < Test::Unit::TestCase
   end
   
   def close_alert_and_get_its_text(how, what)
-    alert = ${receiver}.switch_to().alert()
+    alert = $receiver.switch_to().alert()
     alert_text = alert.text
     if (@accept_next_alert) then
       alert.accept()
